@@ -15,7 +15,15 @@ export const Container = styled.main`
 
             font-weight: 700;
             font-size: 1.563rem;
-        }            
+        } 
+        
+        .totalizers {
+            display: flex;
+            justify-content: space-between;
+
+            font-weight: 600;
+            font-size: 1rem;
+        }
 
         .frete-gratis {
             display: flex;

@@ -1,11 +1,11 @@
-import ICart from "../models/cart";
+import ICart from "../models/Cart";
 
 export const Cart: ICart = 
     {
         value: 1250, 
         totalizers: [
-            { "id": "Items", "name": "Total dos Itens", "value": 729 },
-            { "id": "Discounts", "name": "Total dos Descontos", "value": -72 }
+            { "id": "Items", "name": "Total dos Itens", "value": 1806 },
+            { "id": "Discounts", "name": "Total dos Descontos", "value": -556 }
         ],
         items: [
             {

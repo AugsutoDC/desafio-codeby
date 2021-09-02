@@ -5,7 +5,9 @@ import { Container } from "./styles";
 import { Footer } from "../Footer";
 import { Header } from "../Header";
 
-import ICart from "../../models/cart";
+import ICart from "../../models/Cart";
+import { api } from "../../services/api";
+
 
 export function Cart() {
     const [cart, setCart] = useState({
@@ -15,9 +17,8 @@ export function Cart() {
       } as ICart);
     
       useEffect(() => {
-        fetch("http://localhost:3000/api/cart")
-        .then(response => response.json())
-        .then(data => setCart(data));
+        api.get("cart")
+        .then(response => setCart(response.data));
       }, []);
 
     return (

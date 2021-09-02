@@ -21,10 +21,17 @@ export function Body(props: BodyProps) {
                  ))}             
             </div>
             <div className="totais">
+                {props.totalizers.map(total => (
+                    <div className="totalizers">
+                        <span>{total.name}</span>
+                        <span>{converterEmReal(converterEmFloat(total.value/100))}</span>
+                    </div>
+                ))}
+                
                 <div className="total-geral">
                     <span>Total</span>
                     <span>{converterEmReal(converterEmFloat(props.total/100))}</span>
-                </div>                    
+                </div>
 
                 {(props.total / 100) > 10 && (
                     <div className="frete-gratis">
